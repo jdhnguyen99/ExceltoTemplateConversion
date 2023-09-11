@@ -84,7 +84,7 @@ def handle_mouseclickGenerate():
     
     df = df.fillna('')
 
-    ###################################### PRATIK LOOK HERE #################################
+    
     rows_to_remove = []
     consolidated_note_index = 0
     for i, row in df.iterrows():
@@ -96,7 +96,7 @@ def handle_mouseclickGenerate():
     df = df[df['Notes'] != '']
     df = df.drop(rows_to_remove)
     df.reset_index(drop=True, inplace=True)
-    ###########################################################################################
+    
     
     doc = DocxTemplate(f'{word_path.get()}\PtInfoTemplate.docx')               # open doc for write
     filepath = "tempJDHN"
